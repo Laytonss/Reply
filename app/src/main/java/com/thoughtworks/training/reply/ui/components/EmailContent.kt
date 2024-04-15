@@ -50,7 +50,7 @@ fun EmailContent() {
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
-private fun EmailItem(email: Email, modifier: Modifier = Modifier) {
+fun EmailItem(email: Email, modifier: Modifier = Modifier) {
     Card(
         modifier = modifier
             .padding(horizontal = 16.dp, vertical = 4.dp)
