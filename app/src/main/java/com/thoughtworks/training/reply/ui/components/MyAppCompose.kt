@@ -34,15 +34,15 @@ fun MyApp() {
             }
 
             BottomNavigationItem.ARTICLE -> {
-                Text(text = "ARTICLE Page", modifier = Modifier.padding(innerPadding))
+                ScreenUnderConstruction()
             }
 
             BottomNavigationItem.CHAT -> {
-                Text(text = "CHAT Page", modifier = Modifier.padding(innerPadding))
+                ScreenUnderConstruction()
             }
 
             BottomNavigationItem.GROUP -> {
-                Text(text = "GROUP Page", modifier = Modifier.padding(innerPadding))
+                ScreenUnderConstruction()
             }
         }
     }
