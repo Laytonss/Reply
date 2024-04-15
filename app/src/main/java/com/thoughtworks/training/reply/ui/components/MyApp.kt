@@ -29,7 +29,7 @@ fun MyApp() {
     ) { innerPadding ->
         when (selectedItem) {
             BottomNavigationItem.EMAILS -> {
-                EmailContent(modifier = Modifier.padding(innerPadding))
+                EmailHome(modifier = Modifier.padding(innerPadding))
             }
 
             BottomNavigationItem.ARTICLE -> {
