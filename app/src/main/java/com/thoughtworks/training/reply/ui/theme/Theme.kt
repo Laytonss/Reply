@@ -1,6 +1,7 @@
 package com.thoughtworks.training.reply.ui.theme
 import android.app.Activity
 import android.os.Build
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.ColorScheme
 import androidx.compose.material3.MaterialTheme
@@ -14,6 +15,7 @@ import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
 import androidx.core.view.WindowCompat
+import java.util.Calendar
 
 private val lightScheme = lightColorScheme(
     primary = primaryLight,
@@ -249,9 +251,14 @@ fun isContrastAvailable(): Boolean {
 
 @Composable
 fun selectSchemeForContrast(isDark: Boolean,): ColorScheme {
-   // TODO
-    return lightScheme
+    val hour = Calendar.getInstance().get(Calendar.HOUR_OF_DAY)
+    return if (hour >= 18 || hour < 6) {
+        darkScheme
+    } else {
+        lightScheme
+    }
 }
+
 @Composable
 fun ContrastAwareReplyTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
